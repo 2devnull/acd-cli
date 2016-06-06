@@ -12,7 +12,7 @@ mkdir -p $MOUNT_TARGET
 acd_cli sync
 
 # Clean up any running mount
-fusermount -u $MOUNT_TARGET
+umount -f $MOUNT_TARGET
 
 # Mount away!
 exec acd_cli -d mount -i60 -fg $MOUNT_TARGET
